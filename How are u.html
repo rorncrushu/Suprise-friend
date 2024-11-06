@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f8ff;
+            color: #333;
+            flex-direction: column;
+            text-align: center;
+        }
+        button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #ff4e47;
+        }
+        input {
+            padding: 8px;
+            margin-top: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hey You!</h1>
+    <p>Kal chob slanh ke mneak eg?</p>
+
+    <button onclick="askBestie()">Asnwer now!</button>
+
+    <div id="response"></div>
+
+    <script>
+        function askBestie() {
+            // Ask the user to input how they are feeling
+            let response = prompt("Hey You! Kal chob slanh ke mneak eg?");
+            
+            // Display a personalized message based on the response
+            if (response) {
+                document.getElementById('response').innerHTML = `Glad to hear that ${response}! 💖`;
+            } else {
+                document.getElementById('response').innerHTML = "Oops! You didn't respond. 😅";
+            }
+        }
+    </script>
+
+</body>
+</html>
